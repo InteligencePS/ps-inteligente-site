@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Guia rápido para atendimento no pronto-socorro.">
+  <title>PS Inteligente</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container hero">
+      <div>
+        <span class="eyebrow">GUIA DE BOLSO</span>
+        <h1>PS Inteligente</h1>
+        <p>Protocolos, prescrições, escores e modelos para o Pronto-Socorro.</p>
+      </div>
+      <button id="themeButton" class="theme-button" type="button" aria-label="Alternar tema">☾</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="search-box">
+      <label for="search">Pesquisar no guia</label>
+      <input id="search" type="search" placeholder="Ex.: sepse, AVC, NEWS2, alta..." autocomplete="off">
+      <p id="resultCount" class="muted"></p>
+    </section>
+
+    <section>
+      <div class="section-heading">
+        <h2>Categorias</h2>
+        <span class="badge">Versão inicial</span>
+      </div>
+
+      <div id="cardGrid" class="grid">
+        <a class="card searchable" data-search="protocolos sepse avc dor toracica sincope choque" href="protocolos/index.html">
+          <div class="icon">🚑</div>
+          <h3>Protocolos</h3>
+          <p>Fluxos objetivos para as principais emergências.</p>
+        </a>
+
+        <a class="card searchable" data-search="prescricoes medicamentos doses diluicoes infusao" href="prescricoes/index.html">
+          <div class="icon">💊</div>
+          <h3>Prescrições</h3>
+          <p>Modelos editáveis para situações frequentes.</p>
+        </a>
+
+        <a class="card searchable" data-search="escores news2 heart wells curb65 glasgow" href="escores/index.html">
+          <div class="icon">📊</div>
+          <h3>Escores</h3>
+          <p>Critérios e interpretação rápida à beira-leito.</p>
+        </a>
+
+        <a class="card searchable" data-search="modelos evolucao alta internacao transferencia obito" href="modelos/index.html">
+          <div class="icon">📄</div>
+          <h3>Modelos</h3>
+          <p>Textos prontos para copiar e adaptar.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="quick-links">
+      <h2>Acesso rápido</h2>
+      <div class="link-list">
+        <a class="searchable" data-search="sepse protocolo" href="protocolos/sepse.html">Sepse</a>
+        <a class="searchable" data-search="avc protocolo" href="protocolos/avc.html">AVC</a>
+        <a class="searchable" data-search="sincope protocolo" href="protocolos/sincope.html">Síncope</a>
+        <a class="searchable" data-search="news2 escore" href="escores/news2.html">NEWS2</a>
+        <a class="searchable" data-search="evolucao sala vermelha modelo" href="modelos/evolucao-sala-vermelha.html">Evolução Sala Vermelha</a>
+      </div>
+    </section>
+
+    <aside class="warning">
+      <strong>Aviso:</strong> material de apoio profissional. Confirmar doses, contraindicações, protocolos institucionais e condições clínicas antes de aplicar qualquer conduta.
+    </aside>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>PS Inteligente • Conteúdo em construção</p>
+    </div>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
