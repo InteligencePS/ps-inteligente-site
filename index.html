@@ -3,183 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="PS Inteligente — protocolos, prescrições e ferramentas para o pronto-socorro.">
+  <meta name="description" content="Guia rápido para atendimento no pronto-socorro.">
   <title>PS Inteligente</title>
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <aside class="sidebar" id="sidebar">
-    <div class="brand">
-      <div class="brand-icon">✚</div>
+  <header class="topbar">
+    <div class="container hero">
       <div>
-        <strong>PS Inteligente</strong>
-        <span>Guia de emergência</span>
+        <span class="eyebrow">GUIA DE BOLSO</span>
+        <h1>PS Inteligente</h1>
+        <p>Protocolos, prescrições, escores e modelos para o Pronto-Socorro.</p>
       </div>
+      <button id="themeButton" class="theme-button" type="button" aria-label="Alternar tema">☾</button>
     </div>
+  </header>
 
-    <nav>
-      <p class="nav-label">Navegação</p>
-      <a class="nav-item active" href="index.html">⌂ <span>Início</span></a>
-      <a class="nav-item" href="protocolos/index.html">🚑 <span>Protocolos</span></a>
-      <a class="nav-item" href="prescricoes/index.html">📋 <span>Prescrições</span></a>
-      <a class="nav-item soon" href="#" data-soon="Guias assistenciais">📖 <span>Guias assistenciais</span></a>
-      <a class="nav-item" href="escores/index.html">📊 <span>Escores</span></a>
-      <a class="nav-item soon" href="#" data-soon="Calculadoras">🧮 <span>Calculadoras</span></a>
-      <a class="nav-item soon" href="#" data-soon="ECG">♥ <span>ECG</span></a>
-      <a class="nav-item soon" href="#" data-soon="POCUS">◉ <span>POCUS</span></a>
-      <a class="nav-item" href="modelos/index.html">📄 <span>Modelos</span></a>
-      <a class="nav-item soon" href="#" data-soon="Exames e imagens">🧪 <span>Exames e imagens</span></a>
-      <a class="nav-item soon" href="#" data-soon="Medicamentos">💊 <span>Medicamentos</span></a>
-    </nav>
+  <main class="container">
+    <section class="search-box">
+      <label for="search">Pesquisar no guia</label>
+      <input id="search" type="search" placeholder="Ex.: sepse, AVC, NEWS2, alta..." autocomplete="off">
+      <p id="resultCount" class="muted"></p>
+    </section>
 
-    <div class="sidebar-bottom">
-      <p>PS Inteligente</p>
-      <small>Versão 2.0 — estrutura inicial</small>
+    <section>
+      <div class="section-heading">
+        <h2>Categorias</h2>
+        <span class="badge">Versão inicial</span>
+      </div>
+
+      <div id="cardGrid" class="grid">
+        <a class="card searchable" data-search="protocolos sepse avc dor toracica sincope choque" href="protocolos/index.html">
+          <div class="icon">🚑</div>
+          <h3>Protocolos</h3>
+          <p>Fluxos objetivos para as principais emergências.</p>
+        </a>
+
+        <a class="card searchable" data-search="prescricoes medicamentos doses diluicoes infusao fratura fechada" href="prescricoes/index.html">
+          <div class="icon">💊</div>
+          <h3>Prescrições</h3>
+          <p>Modelos interativos, editáveis e prontos para copiar.</p>
+        </a>
+
+        <a class="card searchable" data-search="escores news2 heart wells curb65 glasgow" href="escores/index.html">
+          <div class="icon">📊</div>
+          <h3>Escores</h3>
+          <p>Critérios e interpretação rápida à beira-leito.</p>
+        </a>
+
+        <a class="card searchable" data-search="modelos evolucao alta internacao transferencia obito" href="modelos/index.html">
+          <div class="icon">📄</div>
+          <h3>Modelos</h3>
+          <p>Textos prontos para copiar e adaptar.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="quick-links">
+      <h2>Acesso rápido</h2>
+      <div class="link-list">
+        <a class="searchable" data-search="fratura fechada prescrição ortopedia" href="prescricoes/fratura-fechada.html">Fratura Fechada</a>
+        <a class="searchable" data-search="sepse protocolo" href="protocolos/sepse.html">Sepse</a>
+        <a class="searchable" data-search="avc protocolo" href="protocolos/avc.html">AVC</a>
+        <a class="searchable" data-search="sincope protocolo" href="protocolos/sincope.html">Síncope</a>
+        <a class="searchable" data-search="news2 escore" href="escores/news2.html">NEWS2</a>
+        <a class="searchable" data-search="evolucao sala vermelha modelo" href="modelos/evolucao-sala-vermelha.html">Evolução Sala Vermelha</a>
+      </div>
+    </section>
+
+    <aside class="warning">
+      <strong>Aviso:</strong> material de apoio profissional. Confirmar doses, contraindicações, protocolos institucionais e condições clínicas antes de aplicar qualquer conduta.
+    </aside>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>PS Inteligente • Conteúdo em construção</p>
     </div>
-  </aside>
+  </footer>
 
-  <div class="app">
-    <header class="topbar">
-      <button class="menu-button" id="menuButton" aria-label="Abrir menu">☰</button>
-      <div class="global-search">
-        <span>⌕</span>
-        <input id="searchInput" type="search" placeholder="Buscar protocolos, prescrições, escores...">
-      </div>
-      <button class="theme-button" id="themeButton" aria-label="Alternar tema">☾</button>
-    </header>
-
-    <main>
-      <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <span class="eyebrow">GUIA DE BOLSO</span>
-          <h1>PS Inteligente</h1>
-          <h2>Decisões rápidas no Pronto-Socorro</h2>
-          <p>Protocolos, prescrições e ferramentas organizadas para consulta à beira-leito.</p>
-          <div class="hero-stats">
-            <div><strong>Prescrições</strong><span>modelos interativos</span></div>
-            <div><strong>Protocolos</strong><span>consulta rápida</span></div>
-            <div><strong>Ferramentas</strong><span>em expansão</span></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-heading">
-          <div>
-            <span class="eyebrow dark">ACESSO PRINCIPAL</span>
-            <h2>Guias assistenciais</h2>
-          </div>
-          <span class="version">Versão inicial</span>
-        </div>
-
-        <div class="featured-grid">
-          <a class="feature-card green soon searchable" href="#" data-search="guia internação internacao hospitalar" data-soon="Guia de Internação">
-            <span class="feature-icon">✓</span>
-            <div><h3>Guia de Internação</h3><p>Critérios e orientações para internação hospitalar.</p></div>
-          </a>
-
-          <a class="feature-card amber soon searchable" href="#" data-search="prescrição verde amarela observação" data-soon="Guia de Prescrição Verde/Amarela">
-            <span class="feature-icon">≡</span>
-            <div><h3>Prescrição Verde / Amarela</h3><p>Modelos para pacientes estáveis e em observação.</p></div>
-          </a>
-
-          <a class="feature-card red soon searchable" href="#" data-search="prescrição vermelha sala vermelha grave" data-soon="Guia de Prescrição Vermelha">
-            <span class="feature-icon">⌁</span>
-            <div><h3>Prescrição Vermelha</h3><p>Prescrições para pacientes graves e sala vermelha.</p></div>
-          </a>
-
-          <a class="feature-card blue soon searchable" href="#" data-search="solicitação exames laboratório imagem" data-soon="Protocolo de Solicitação de Exames">
-            <span class="feature-icon">⚗</span>
-            <div><h3>Solicitação de Exames</h3><p>Orientações para exames laboratoriais e de imagem.</p></div>
-          </a>
-        </div>
-      </section>
-
-      <section class="dashboard-grid">
-        <article class="dashboard-card">
-          <div class="card-heading">
-            <h3>Prescrições rápidas</h3>
-            <a href="prescricoes/index.html">Ver todas →</a>
-          </div>
-          <a class="list-item searchable" data-search="fratura fechada ortopedia cirurgia" href="prescricoes/fratura-fechada.html">
-            <span class="list-icon">🦴</span>
-            <div><strong>Fratura Fechada</strong><small>Prescrição interativa</small></div>
-            <span>›</span>
-          </a>
-          <a class="list-item soon searchable" data-search="fratura exposta" href="#" data-soon="Fratura Exposta">
-            <span class="list-icon">🦴</span>
-            <div><strong>Fratura Exposta</strong><small>Em desenvolvimento</small></div>
-            <span>›</span>
-          </a>
-          <a class="list-item soon searchable" data-search="pneumonia prescrição" href="#" data-soon="Prescrição de Pneumonia">
-            <span class="list-icon">🫁</span>
-            <div><strong>Pneumonia</strong><small>Próxima prescrição clínica</small></div>
-            <span>›</span>
-          </a>
-        </article>
-
-        <article class="dashboard-card">
-          <div class="card-heading">
-            <h3>Protocolos em destaque</h3>
-            <a href="protocolos/index.html">Ver todos →</a>
-          </div>
-          <a class="list-item searchable" data-search="sepse protocolo" href="protocolos/sepse.html">
-            <span class="list-icon">✹</span>
-            <div><strong>Sepse</strong><small>Reconhecimento e manejo inicial</small></div>
-            <span>›</span>
-          </a>
-          <a class="list-item searchable" data-search="avc acidente vascular cerebral" href="protocolos/avc.html">
-            <span class="list-icon">🧠</span>
-            <div><strong>AVC</strong><small>Fluxo inicial</small></div>
-            <span>›</span>
-          </a>
-          <a class="list-item searchable" data-search="síncope sincope" href="protocolos/sincope.html">
-            <span class="list-icon">⌁</span>
-            <div><strong>Síncope</strong><small>Avaliação e risco</small></div>
-            <span>›</span>
-          </a>
-        </article>
-
-        <article class="dashboard-card">
-          <div class="card-heading">
-            <h3>Ferramentas</h3>
-            <span>Em expansão</span>
-          </div>
-          <a class="list-item searchable" data-search="news2 escore deterioração" href="escores/news2.html">
-            <span class="list-icon">📈</span>
-            <div><strong>NEWS2</strong><small>Alerta precoce</small></div>
-            <span>›</span>
-          </a>
-          <a class="list-item soon searchable" data-search="calculadora drogas dose diluição ml hora" href="#" data-soon="Calculadora de Drogas">
-            <span class="list-icon">💉</span>
-            <div><strong>Calculadora de Drogas</strong><small>Dose, diluição e mL/h</small></div>
-            <span>›</span>
-          </a>
-          <a class="list-item searchable" data-search="evolução sala vermelha modelo" href="modelos/evolucao-sala-vermelha.html">
-            <span class="list-icon">📄</span>
-            <div><strong>Evolução Sala Vermelha</strong><small>Modelo copiável</small></div>
-            <span>›</span>
-          </a>
-        </article>
-      </section>
-
-      <section class="notice">
-        <strong>Importante</strong>
-        <p>Este guia é material de apoio profissional e não substitui o julgamento clínico. Confirmar doses, contraindicações, interações e protocolos institucionais.</p>
-      </section>
-
-      <div id="emptyState" class="empty-state hidden">
-        Nenhum item encontrado para esta pesquisa.
-      </div>
-    </main>
-  </div>
-
-  <div class="toast" id="toast">
-    <strong id="toastTitle">Módulo em desenvolvimento</strong>
-    <span>Este conteúdo será adicionado nas próximas atualizações.</span>
-  </div>
-
-  <script src="assets/app.js"></script>
+  <script src="assets/script.js"></script>
 </body>
 </html>
